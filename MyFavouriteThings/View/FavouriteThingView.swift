@@ -25,6 +25,7 @@ struct FavouriteThingView: View {
                     .font(.title2)
                     .bold()
                 Text(providedFavouriteThing.description)
+                    .font(Font.custom("Times New Roman", size: 18))
             }
         }
         .padding(.vertical)

@@ -12,7 +12,11 @@ struct FavouriteThingsListView: View {
     var body: some View {
         NavigationStack{
             List(favouriteThings) { currentFavouriteThing in
-                FavouriteThingView(providedFavouriteThing: currentFavouriteThing)
+                NavigationLink {
+                    FavouriteThingsDetailView(thingToShow: currentFavouriteThing)
+                } label: {
+                    FavouriteThingView(providedFavouriteThing: currentFavouriteThing)
+                }
             }
             .listStyle(.plain)
             .navigationTitle("My Favourite Things")
